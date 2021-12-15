@@ -19,7 +19,7 @@ let Tortank = new Pokemon ('Tortank', 'Eau', false);
 
 
 //Création d'une fonction que je pourrais appeler dans ma boucle for:
-function pokedex (pokemon){
+/* function pokedex (pokemon){
     if (pokemon.caught === true){
     return "J'ai déjà " + pokemon.name + " !!" 
 }
@@ -48,7 +48,7 @@ for ( const pokemon of myPokemons){
 
 
 
-const img = document.getElementById('img');
+
 
  /*fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
   .then((response) => response.json()) 
@@ -62,13 +62,45 @@ const img = document.getElementById('img');
 
 fetchVenusaur(); */
   
-async function myFetch(venusaur) {
+async function myFetch(nom) {
 
-    let response = await fetch('https://pokeapi.co/api/v2/pokemon/venusaur')
+    let response = await fetch('https://pokeapi.co/api/v2/pokemon/' + nom)
     let pokemon = await response.json()
-    console.log(pokemon)}
-   
-myFetch('venusaur')
+    console.log(pokemon)
+    newPokemon(pokemon.name, pokemon.sprites.front_default, pokemon.types[0].type.name)
+}
+
+function newPokemon(nom, img, type){
+document.getElementById('pokemon_list').innerHTML = `<li> ${nom} <br>
+<img src="${img}"/> ${type}</li> `
+}
+
+
+function searchBar(e){
+    let pokemonNom = document.getElementById('searchBar').value
+    myFetch(pokemonNom)
+    /*if (e.key === 'Enter' || e.keyCode === 13){
+        myFetch(pokemonNom)
+    }
+    if(e.pointerType == "mouse"){
+        myFetch(pokemonNom)
+    }
+    console.log(e)*/
+}
+
+
+//document.getElementById('enterButton').addEventListener('click', searchBar)
+document.getElementById('searchBar').addEventListener('keyup', function (event){
+    searchBar(event)
+}) 
+    // Do something
+
+console.log(document.getElementById('enterButton'))
+
+
+
+
+
 
 
   
