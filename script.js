@@ -72,8 +72,8 @@ async function myFetch(nom) {
 
 function newPokemon(nom, img, type){
 document.getElementById('pokemon_list').innerHTML = `<li> <img src=" ${img}"/> <br>
-<strong> Name:</strong> ${nom}<br>
-Type: ${type}</li> `
+NAME: ${nom}<br>
+TYPE: ${type}</li> `
 }
 
 
