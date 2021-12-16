@@ -71,8 +71,9 @@ async function myFetch(nom) {
 }
 
 function newPokemon(nom, img, type){
-document.getElementById('pokemon_list').innerHTML = `<li> ${nom} <br>
-<img src="${img}"/> ${type}</li> `
+document.getElementById('pokemon_list').innerHTML = `<li> <img src=" ${img}"/> <br>
+<strong> Name:</strong> ${nom}<br>
+Type: ${type}</li> `
 }
 
 
@@ -96,7 +97,6 @@ document.getElementById('searchBar').addEventListener('keyup', function (event){
     // Do something
 
 console.log(document.getElementById('enterButton'))
-
 
 
 
