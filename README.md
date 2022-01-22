@@ -22,4 +22,4 @@ Vous retrouverez mon mini projet [ici](https://cynthiacrn.github.io/Mon_Pokedex/
 
 ## A reproduire sans modération
 
-N'hésitez pas à essayer de reproduire votre propre Pokedex et à me partager vos résultats.
+N'hésitez pas à essayer de reproduire votre propre Pokedex et à me partager vos résultats. Pourquoi ne pas insérer d'autres fonctions comme celle d'attrapper un pokémon par exemple ?
